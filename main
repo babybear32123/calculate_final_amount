@@ -1,0 +1,17 @@
+def calculate_final_amount(principal, periods, rate):
+    # 首先計算複利的最終金額
+    final_amount = principal * (1 + rate / 100) ** periods
+    # 四捨五入取整
+    final_amount = round(final_amount)
+    # 將金額加上千分位符號並印出
+    formatted_amount = f"{final_amount:,}"
+    print(formatted_amount)
+
+# 初始本金
+principal = 500000
+# 期數
+periods = 24
+# 利率
+rate = 6
+
+calculate_final_amount(principal, periods, rate)
